@@ -1,1 +1,1 @@
-# uzzlius.github.io
+# uzzlius
