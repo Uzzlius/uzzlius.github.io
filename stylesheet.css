@@ -1,15 +1,34 @@
-html {
-    background-color: #fafbfc;
+:root {
+    --bg-color: #fafbfc;
+    --text-color: #060607;
+    --secondary-text-color: #666666;
+    --bar-bg: #9bb1de;
+    --bar-progress: #5375b6;
+    --bottom-box-bg: #f2f2f2;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121316;
+        --text-color: #f8f9fc;
+        --secondary-text-color: #aaaaaa;
+        --bar-bg: #192867;
+        --bar-progress: #5d77dd;
+        --bottom-box-bg: #18191c;
+    }
+}
+
+html,
+body {
+    background-color: var(--bg-color);
     overflow: hidden;
 }
 
 body {
-    background-color: #fafbfc;
     margin: 0;
     min-height: 100vh;
     display: grid;
     place-items: center;
-    overflow: hidden;
 }
 
 #bar-and-text {
@@ -21,7 +40,7 @@ body {
 }
 
 #loading-info {
-    color: #060607;
+    color: var(--text-color);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8em;
     text-align: center;
@@ -30,36 +49,38 @@ body {
 #background-bar {
     height: 10px;
     width: 100%;
-    background-color: #9bb1de;
+    background-color: var(--bar-bg);
     border-radius: 7px;
     overflow: hidden;
 }
 
 #progress-bar {
     height: 100%;
-    width: 0px;
-    background-color: #5375b6;
+    width: 0;
+    background-color: var(--bar-progress);
     border-radius: 7px;
     transition: width 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        background-color: #121316;
-    }
-    body {
-        background-color: #121316;
-    }
+#bottom-box {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: var(--bottom-box-bg);
+}
 
-    #loading-info {
-        color: #f8f9fc;
-    }
+a {
+    color: var(--secondary-text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    text-decoration: none;
+}
 
-    #background-bar {
-        background-color: #192867;
-    }
-
-    #progress-bar {
-        background-color: #5d77dd;
-    }
+#bottom-box-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
 }
