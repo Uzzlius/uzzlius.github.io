@@ -10,8 +10,8 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #121316;
-        --text-color: #f8f9fc;
-        --secondary-text-color: #aaaaaa;
+        --text-color: #d6d8db;
+        --secondary-text-color: #888888;
         --bar-bg: #192867;
         --bar-progress: #5d77dd;
         --bottom-box-bg: #18191c;
