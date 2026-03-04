@@ -19,21 +19,12 @@ const loadingInformation = [
   "arranging the pixels",
 ];
 
+for (let i = 0; i < loadingInformation.length; i++) {
+  loadingInformation[i] = loadingInformation[i] + " ...";
+}
+
 loadingInformation.sort(() => Math.random() - 0.5);
 loadingInfo.textContent = loadingInformation[0];
-
-const progressSegment = [
-  [35, 0.8],
-  [0, 0.4],
-  [20, 1.5],
-  [0, 3.0],
-  [30, 0.5],
-  [10, 8.0],
-  [0, 5.0],
-  [3, 1.0],
-  [1, 15.0],
-  [0.9, 999999],
-];
 
 const progressSegments = [
   [40, 0.9],
